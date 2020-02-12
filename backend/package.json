@@ -77,10 +77,10 @@
     "lodash": "^4.17.15",
     "request": "^2.88.0",
     "request-promise": "^4.2.2",
-    "request-promise-native": "^1.0.7"
+    "request-promise-native": "^1.0.7",
+    "uuidv4": "^6.0.2"
   },
   "devDependencies": {
-    "@types/aws-serverless-express": "^3.3.1",
     "@types/cors": "^2.8.6",
     "@types/dotenv": "^6.1.1",
     "@types/dotenv-safe": "^5.0.4",
@@ -94,13 +94,10 @@
     "express-session": "^1.17.0",
     "faker": "^4.1.0",
     "jest": "^24.8.0",
-    "ms": "^2.1.2",
-    "passport-mock-strategy": "^2.0.0",
     "ts-jest": "^24.0.2",
     "tsc-watch": "^1.1.39",
     "tslint": "^5.16.0",
     "tslint-eslint-rules": "^5.4.0",
-    "typescript": "^3.7.5",
-    "uuidv4": "^6.0.1"
+    "typescript": "^3.7.5"
   }
 }
