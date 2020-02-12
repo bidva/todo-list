@@ -1,6 +1,5 @@
 import {
   handleBodyRequestParsing,
-  // handleCompression,
   handleCors,
   handleOptions
 } from "./common";
