@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useDispatch } from 'redux-react-hook';
 import actions from '../actions/item';
 import { uuid } from 'uuidv4';
-import { Element, scroller } from "react-scroll";
+import { scroller } from "react-scroll";
 
 const inputStyle: any = {
   width: '80%',
