@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nf start"
+    "build:backend":"cd backend && npm run build",
+    "start": "npm run build:backend && nf start"
   },
   "author": "",
   "license": "ISC",
