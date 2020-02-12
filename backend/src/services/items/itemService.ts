@@ -112,7 +112,7 @@ export default class ItemService {
             if (list) {
               const item = list.items.find((item) => item.id === itemId);
               if (item) {
-                list.items.splice(_.indexOf(list.items, _.find(list.items, (item: any) => item.Id === itemId)), 1);
+                list.items = list.items.filter(item => item.id !== itemId);
                 res.status(200).json({ message: "deleted" });
               } else {
                 res.status(404).json({ message: "item not found." });
