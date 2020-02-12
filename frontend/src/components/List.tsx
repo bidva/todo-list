@@ -110,6 +110,7 @@ class List extends React.Component<AppProps> {
                     <Draggable
                       key={`${item.id},${index}`}
                       draggableId={`${item.id},${index}`}
+                      isDragDisabled={!item.id || loadingDeleteItem}
                       index={index}
                     >
                       {(
