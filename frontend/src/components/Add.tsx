@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useDispatch } from 'redux-react-hook';
 import actions from '../actions/item';
 import { uuid } from 'uuidv4';
+import { Element, scroller } from "react-scroll";
 
 const inputStyle: any = {
   width: '80%',
@@ -22,6 +23,15 @@ const buttonStyle: any = {
   width: 50
 };
 
+const scrollToBottom = () => {
+  scroller.scrollTo('endOfList', {
+    duration: 1500,
+    delay: 100,
+    smooth: true,
+    containerId: 'droppableContainer',
+  });
+}
+
 export default function TodoInput({ listId }: any) {
   const [newTodo, setNewTodo] = React.useState('');
   const dispatch = useDispatch();
@@ -36,6 +46,7 @@ export default function TodoInput({ listId }: any) {
           if (e.key === 'Enter' && newTodo.trim().length > 0) {
             dispatch(actions.createItem(payload));
             setNewTodo('');
+            scrollToBottom();
           }
         }}
         placeholder="Enter Item"
@@ -47,6 +58,7 @@ export default function TodoInput({ listId }: any) {
           if (newTodo.trim().length > 0) {
             dispatch(actions.createItem(payload));
             setNewTodo('');
+            scrollToBottom();
           }
         }}
       >

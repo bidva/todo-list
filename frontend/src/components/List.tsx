@@ -13,7 +13,7 @@ import { Flex } from 'grid-styled';
 import './List.css';
 import { connect } from 'react-redux';
 import actions from '../actions/item';
-import { animateScroll } from "react-scroll";
+import { Element, scroller } from "react-scroll";
 
 interface Item {
   id: string;
@@ -81,13 +81,13 @@ class List extends React.Component<AppProps> {
   componentDidMount() {
       this.scrollToBottom();
   }
-  componentDidUpdate() {
-      this.scrollToBottom();
-  }
   scrollToBottom() {
-      animateScroll.scrollToBottom({
-        containerId: "droppableContainer"
-      });
+    scroller.scrollTo('endOfList', {
+      duration: 1500,
+      delay: 100,
+      smooth: true,
+      containerId: 'droppableContainer',
+    })
   }
   public render() {
     const { loadingDeleteItem } = this.props;
@@ -142,6 +142,7 @@ class List extends React.Component<AppProps> {
                       )}
                     </Draggable>
                   ))}
+                  <Element name="endOfList"></Element>
                 </div>
               )}
             </Droppable>
