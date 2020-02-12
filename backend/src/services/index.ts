@@ -1,8 +1,5 @@
-import { NextFunction, Request, Response } from "express";
-import env from "../infra/env";
 import { Route } from "../utils";
 import ItemService from "./items/itemService";
-const request = require("request-promise-native");
 
 export let item: any = null;
 

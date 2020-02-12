@@ -53,9 +53,6 @@
       "source-map",
       "is-buffer",
       "debug",
-      "ms",
-      "axios",
-      "qs",
       "content-disposition",
       "express",
       "raw-body",
@@ -76,8 +73,6 @@
     "express": "^5.0.0-alpha.7",
     "lodash": "^4.17.15",
     "request": "^2.88.0",
-    "request-promise": "^4.2.2",
-    "request-promise-native": "^1.0.7",
     "uuidv4": "^6.0.2"
   },
   "devDependencies": {
