@@ -13,6 +13,7 @@ import { Flex } from 'grid-styled';
 import './List.css';
 import { connect } from 'react-redux';
 import actions from '../actions/item';
+import { animateScroll } from "react-scroll";
 
 interface Item {
   id: string;
@@ -77,6 +78,17 @@ class List extends React.Component<AppProps> {
     deleteItem({ id, listId });
   };
 
+  componentDidMount() {
+      this.scrollToBottom();
+  }
+  componentDidUpdate() {
+      this.scrollToBottom();
+  }
+  scrollToBottom() {
+      animateScroll.scrollToBottom({
+        containerId: "droppableContainer"
+      });
+  }
   public render() {
     const { loadingDeleteItem } = this.props;
     return (
@@ -91,6 +103,7 @@ class List extends React.Component<AppProps> {
                 <div
                   ref={provided.innerRef}
                   {...provided.droppableProps}
+                  id="droppableContainer"
                   style={getListStyle(snapshot.isDraggingOver)}
                 >
                   {this.props.items.map((item, index) => (
