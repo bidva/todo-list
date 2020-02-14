@@ -23,14 +23,8 @@
       "/**/*.{js,ts}"
     ],
     "testRegex": "(/__tests__/.*/|(\\.|_|/)(test|spec))\\.(jsx?|tsx?)$",
-    "haste": {
-      "providesModuleNodeModules": [
-        "krs-oc-.*"
-      ]
-    },
     "testPathIgnorePatterns": [
-      "<rootDir>/dist/",
-      "/__tests__/unit/fixtures/"
+      "<rootDir>/dist/"
     ],
     "moduleNameMapper": {
       "^src/(.*)$": "<rootDir>/src/$1"
@@ -46,7 +40,6 @@
       "js.map"
     ],
     "moduleDirectories": [
-      "<rootDir>/node_modules",
       "<rootDir>/src"
     ],
     "modulePathIgnorePatterns": [
