@@ -72,6 +72,7 @@
     "env-cmd": "^9.0.1",
     "express": "^5.0.0-alpha.7",
     "lodash": "^4.17.15",
+    "morgan": "^1.9.1",
     "request": "^2.88.0",
     "uuidv4": "^6.0.2"
   },
@@ -84,6 +85,7 @@
     "@types/faker": "^4.1.5",
     "@types/jest": "^24.0.12",
     "@types/lodash": "^4.14.149",
+    "@types/morgan": "^1.7.37",
     "@types/node": "^10.17.14",
     "@types/supertest": "^2.0.8",
     "express-session": "^1.17.0",
